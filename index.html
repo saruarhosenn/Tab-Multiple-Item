@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="Description" content="Enter your description here" />
+	<!-- CSS -->
+	<link rel="stylesheet" href="style.css">
+	<title>Animated Tab</title>
+</head>
+
+<body>
+	<br>
+	<br>
+	<h1>Animated Tab</h1>
+	<br>
+	<br>
+	<br>
+
+	<div class="container">
+		<!--=================-->
+		<!------- Tab 1 ------->
+		<h2 style="font-size: 2.3rem">Tab 1 Only html-Css</h2>
+		<br>
+		<div class="warpper">
+			<input class="radio" id="one" name="group" type="radio" checked>
+			<input class="radio" id="two" name="group" type="radio">
+			<input class="radio" id="three" name="group" type="radio">
+			<div class="tabs">
+				<label class="tab-btn" id="one-tab" for="one">HTML</label>
+				<label class="tab-btn" id="two-tab" for="two">CSS</label>
+				<label class="tab-btn" id="three-tab" for="three">JS</label>
+			</div>
+			<div class="panels">
+				<div class="panel" id="one-panel">
+					<h2 class="panel-title">Why Learn HTML?</h2>
+					<p class="panel-desc">Without CSS, every web page would be drab plain text and images that flowed straight down the page. With CSS, you can add color and background images and change the layout of your page — your web pages can feel like works of art!</p>
+				</div>
+				<div class="panel" id="two-panel">
+					<h2 class="panel-title">Why Learn CSS?</h2>
+					<p class="panel-desc">Without CSS, every web page would be drab plain text and images that flowed straight down the page. With CSS, you can add color and background images and change the layout of your page — your web pages can feel like works of art!</p>
+				</div>
+				<div class="panel" id="three-panel">
+					<h2 class="panel-title">Why Learn JS?</h2>
+					<p class="panel-desc">Without CSS, every web page would be drab plain text and images that flowed straight down the page. With CSS, you can add color and background images and change the layout of your page — your web pages can feel like works of art!</p>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+		<!--=================-->
+		<!------- Tab 2 ------->
+		<h2 style="font-size: 2.3rem">Tab 2 html-Css-Javascript</h2>
+		<br>
+		<div class="tab__area">
+			<!--------- TAB BTN --------->
+			<div class="tab">
+				<button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">HTML</button>
+				<button class="tablinks" onclick="openCity(event, 'Paris')">CSS</button>
+				<button class="tablinks" onclick="openCity(event, 'Tokyo')">JS</button>
+			</div>
+
+			<!-------- TAB HIDE CONTENT -------->
+			<div class="main__tab">
+				<div id="London" class="tabcontent">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est vero magni nulla corporis quas,
+						fugiat minus vel facere ad consectetur.</p>
+					<br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est vero magni nulla corporis quas,
+						fugiat minus vel facere ad consectetur.</p>
+				</div>
+
+				<div id="Paris" class="tabcontent">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est vero magni nulla corporis quas,
+						fugiat minus vel facere ad consectetur.</p>
+					<br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est vero magni nulla corporis quas,
+						fugiat minus vel facere ad consectetur.</p>
+					<br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est vero magni nulla corporis quas,
+						fugiat minus vel facere ad consectetur.</p>
+					<br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est vero magni nulla corporis quas,
+						fugiat minus vel facere ad consectetur.</p>
+				</div>
+
+				<div id="Tokyo" class="tabcontent">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est vero magni nulla corporis quas,
+						fugiat minus vel facere ad consectetur.</p>
+					<br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est vero magni nulla corporis quas,
+						fugiat minus vel facere ad consectetur.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+
+	<script>
+		// TAB 1 =====================================
+		function openCity(evt, cityName) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+			document.getElementById(cityName).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+		// Get the element with id="defaultOpen" and click on it
+		document.getElementById("defaultOpen").click();
+
+	</script>
+</body>
+
+</html>

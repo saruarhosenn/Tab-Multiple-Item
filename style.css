@@ -1,0 +1,199 @@
+/*================*/
+/* Basic Style */
+/*================*/
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: sans-serif;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+button,
+input,
+textarea {
+	outline: 0;
+	border: 0;
+}
+
+.container {
+	max-width: 1140px;
+	margin: auto;
+	padding: 0 15px;
+}
+
+h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 3rem;
+}
+
+/*========================*/
+/* Tab 1 only html-Css */
+/*========================*/
+.radio {
+	display: none;
+}
+
+.tab-btn {
+	cursor: pointer;
+	padding: 1rem 2rem;
+	background: #000;
+	display: inline-block;
+	color: #fff;
+	border-radius: .5rem;
+	font-size: 1.8rem;
+}
+
+.tab-btn:not(:last-child) {
+	margin-right: 1.5rem;
+}
+
+.panels {
+	margin-top: 1.5rem;
+	width: 100%;
+	max-width: 70rem;
+	overflow: hidden;
+}
+
+.panel {
+	display: none;
+	-webkit-animation: fadein .8s;
+	        animation: fadein .8s;
+	background: yellow;
+	padding: 2rem;
+}
+
+@-webkit-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+#one:checked ~ .panels #one-panel,
+#two:checked ~ .panels #two-panel,
+#three:checked ~ .panels #three-panel {
+	display: block
+}
+
+#one:checked ~ .tabs #one-tab,
+#two:checked ~ .tabs #two-tab,
+#three:checked ~ .tabs #three-tab {
+	background: yellow;
+	color: #000;
+}
+
+.panel-title {
+	font-size: 2.4rem;
+	margin-bottom: 2rem;
+}
+
+.panel-desc {
+	font-size: 1.6rem;
+}
+
+/*========================*/
+/* Tab 2 html-Css-js */
+/*========================*/
+.tab {
+	overflow: hidden;
+	margin-bottom: 1rem;
+}
+
+.tab button:not(:last-child) {
+	margin-right: 1rem;
+}
+
+.tab button {
+	text-transform: uppercase;
+	font-size: 1.8rem;
+	cursor: pointer;
+	padding: 1rem 2rem;
+	background: #000;
+	color: #FFF;
+	border-radius: .5rem;
+	-webkit-border-radius: .5rem;
+	-moz-border-radius: .5rem;
+	-ms-border-radius: .5rem;
+	-o-border-radius: .5rem;
+	-webkit-box-shadow: rgba(2, 1, 1, 0.1) 0px 4px 12px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+/* tab active */
+.tab button.active {
+	background: yellow;
+	color: #000;
+}
+
+/* tab hide content */
+.main__tab .tabcontent {
+	max-width: 800px;
+	padding: 2rem;
+	display: none;
+	-webkit-animation: fadeEffect 1s;
+	animation: fadeEffect 1s;
+	background: #4A148C;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.main__tab .tabcontent p {
+	font-size: 1.6rem;
+	color: #FFF;
+}
+
+@-webkit-keyframes fadeEffect {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeEffect {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
